@@ -27,21 +27,15 @@ class XylophoneApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               for (var i = init; i <= 7; i++)
                 Expanded(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Expanded(
-                        child: FlatButton(
-                          onPressed: () {
-                            playSound(i);
-                          },
-                          color: colors[i - 1],
-                        ),
-                      ),
-                    ],
+                  child: FlatButton(
+                    onPressed: () {
+                      playSound(i);
+                    },
+                    color: colors[i - 1],
                   ),
                 ),
             ],
